@@ -1,3 +1,8 @@
+# IC Code Sample - Unity Play to Earn Game
+
+- The purpose of this repo is to provide sample code to Unity game developers who may be keen to explore deploying play to earn games on the Internet Computer.
+- This repo will share code and explain how a Unity WebGL game can connect with a user's Internet Computer wallet and also trigger the transfer of tokens to the user's wallet at the end of each game.
+
 # Project Setup and Run in local dfx
 
 - Git clone or download the zip from this repo. Extract the zip file.
@@ -85,7 +90,7 @@ HelloString: function (str) {
 
 - And from the React we can call `sendMessage('controllerName,'Hellostring','Hello World!')` and it will alert <b>Hello World</b>. The controllerName will come from Unity C#.
 
-### React Hook Definiation
+### React Hook Definition
 
 > <b>useCallback</b> - In React, useCallback is a hook that allows you to memoize a function and only re-create it if its dependencies have changed. The first argument is the function that you want to memoize, and the second argument is an array of dependencies that will trigger a re-creation of the function if they change. The resulting memoizedCallback can be passed down to child components as a prop, without being recreated on every render, as long as its dependencies remain the same.
 
@@ -104,7 +109,7 @@ const memoizedCallback = useCallback(
 
 > <b>removeEventListener</b> - is a built-in method in JavaScript that allows you to remove an event listener that was previously attached to an HTML element. In the context of React, WebGL, and Unity, it can be used to remove event listeners that were added to elements in the DOM.
 
-## Project Backend Structure
+### Project Backend Structure
 
 - There are three canisters for this project which are frontend canister, webgl canister and token canister,
 - First the Token canister will do token functionality such as transfer token, check token amount and so on.
@@ -118,7 +123,7 @@ const memoizedCallback = useCallback(
 - We made some changes to the token code and hard code the token information values so that it is easier to deploy; instead of service class that needs to deploy from terminal using parameters.
 - In the `private stable var` we store token information such as owner, token name, fee, amount and so on. This is where you can change the Token information to what you want.
 
-# Project Frontend and Backend Connection
+## Project Frontend and Backend Connection
 
 - The `dfx.json` file includes information about canister with mapping path including frontend, webgl, and token canister.
 - First the frontend canister will include webgl canister as dependencies because we are going to include webgl canister in the frontend.
