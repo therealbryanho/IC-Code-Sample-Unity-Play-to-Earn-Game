@@ -311,7 +311,8 @@ actor Token {
   stable var persistedLog : [Transaction] = [];
 
   system func preupgrade() {
-    persistedLog := log.toArray();
+    persistedLog := Buffer.toArray(log);
+    //persistedLog := log.toArray();
   };
 
   system func postupgrade() {

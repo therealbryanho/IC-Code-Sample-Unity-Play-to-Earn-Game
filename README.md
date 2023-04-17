@@ -9,6 +9,7 @@
 - Go into project main folder and open terminal in the terminal type `npm install` to install the necessary dependencies that used in the project.
 - Open another terminal window and type `dfx start --clean`. This will start a local dfx server. This step won't be required if you are deploying to mainnet.
 - After the dependencies from step 2 are installed, we can deploy locally by typing `dfx deploy`. After successfully deployed, it will display urls for candid UI and react frontend. We can open the react frontend url to play the game. And the token candid UI to query token balance.
+- > If you encounter "sh: webpack: command not found" when deploying, run `npm install --save-dev webpack`. For local testing, use NFID wallet because it works with local replica.
 - > Optional - for the purpose of testing react frontend code easier, you can also open another terminal and run `npm start`. This way, you can change the code and refresh the frontend page without re-deploying and can save some time. When done testing, deploy again using `dfx deploy`.
 
 ## Deployment to Mainnet
