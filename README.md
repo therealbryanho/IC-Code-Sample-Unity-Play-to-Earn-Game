@@ -2,6 +2,7 @@
 
 - The purpose of this repo is to provide sample code to Unity game developers who may be keen to explore deploying play to earn games on the Internet Computer.
 - This repo will share code and explain how a Unity WebGL game can connect with a user's Internet Computer wallet and also trigger the transfer of tokens to the user's wallet at the end of each game.
+- Video Explainer https://youtu.be/-7Nlb9U894o
 
 # Project Setup and Run in local dfx
 
