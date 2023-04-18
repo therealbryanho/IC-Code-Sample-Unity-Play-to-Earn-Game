@@ -9,12 +9,15 @@
 - Git clone or download the zip from this repo. Extract the zip file.
 - Go into project main folder and open terminal in the terminal type `npm install` to install the necessary dependencies that used in the project.
 - Open another terminal window and type `dfx start --clean`. This will start a local dfx server. This step won't be required if you are deploying to mainnet.
+- Before you deploy, ensure you follow the steps https://github.com/therealbryanho/IC-Code-Sample-Unity-Play-to-Earn-Game/blob/main/README.md#L30 
 - After the dependencies from step 2 are installed, we can deploy locally by typing `dfx deploy`. After successfully deployed, it will display urls for candid UI and react frontend. We can open the react frontend url to play the game. And the token candid UI to query token balance.
 - > If you encounter "sh: webpack: command not found" when deploying, run `npm install --save-dev webpack`. For local testing, use NFID wallet because it works with local replica.
+- > If deploy fails, it could be because you did not follow https://github.com/therealbryanho/IC-Code-Sample-Unity-Play-to-Earn-Game/blob/main/README.md#L30. You will need to delete canister_ids.json and deploy again.
 - > Optional - for the purpose of testing react frontend code easier, you can also open another terminal and run `npm start`. This way, you can change the code and refresh the frontend page without re-deploying and can save some time. When done testing, deploy again using `dfx deploy`.
 
 ## Deployment to Mainnet
 
+- Before you deploy, ensure you follow the steps https://github.com/therealbryanho/IC-Code-Sample-Unity-Play-to-Earn-Game/blob/main/README.md#L30 
 - To deploy into main net type `dfx deploy --network ic` this allow to deploy in ic main network.
 
 ## Project Gameplay Flow
@@ -24,7 +27,7 @@
 - Once the game is finish then, the Unity WebGL will call the `GetToken` function from jslib, and React will catch event using addEventLister and call <b>MotokoGetToken</b> with callBack function because Unity send back data to React. The <b>MotokoGetToken</b> will call Transfer function from the WebGL canister using player principal, owner prinicpal, with score.
 - The WebGL canister transfer function will check if owner principal is the same as motoko owner principal, if it's the same then it will call `Token.icrc1_transfer` function and transfer token to the player, else then it will exit without sending any token. And it will popup a message.
 
-## Project folder
+## Project folder (do this before deploying)
 
 - <b>token folder</b> is the token Canister. You will need to update the owner principal with your principal ID in line 30.
 - <b>webgl folder</b> is the Webgl Canister. You will need to update the owner principal with your principal ID in line 12.

@@ -89,7 +89,7 @@ module.exports = {
     new webpack.EnvironmentPlugin({
       NODE_ENV: "development",
       OWENER_PRINCIPAL:
-        "ikyi2-eeuen-hrt6y-zyjqn-my5fy-zi5zy-746dl-otcpi-gfqm3-zzl24-eae",
+        "vxhgn-7jvem-23qhv-w2ojw-cwsgo-dqw2c-gesax-jbn3j-n5f5u-tclno-zae",
       ...canisterEnvVariables,
     }),
     new webpack.ProvidePlugin({

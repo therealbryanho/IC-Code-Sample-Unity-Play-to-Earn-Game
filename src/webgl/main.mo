@@ -9,7 +9,7 @@ actor Main {
     public type Tokens = Nat;
     public type Memo = Blob;
     public type Timestamp = Nat64;
-    private stable var owner_ : Principal = Principal.fromText("ikyi2-eeuen-hrt6y-zyjqn-my5fy-zi5zy-746dl-otcpi-gfqm3-zzl24-eae");
+    private stable var owner_ : Principal = Principal.fromText("vxhgn-7jvem-23qhv-w2ojw-cwsgo-dqw2c-gesax-jbn3j-n5f5u-tclno-zae");
 
     // Get the principal owner
     public query func get() : async Principal {

@@ -27,7 +27,7 @@ actor Token {
 
   // encode value to variable
 
-  private stable var owner_ : Principal = Principal.fromText("ikyi2-eeuen-hrt6y-zyjqn-my5fy-zi5zy-746dl-otcpi-gfqm3-zzl24-eae");
+  private stable var owner_ : Principal = Principal.fromText("vxhgn-7jvem-23qhv-w2ojw-cwsgo-dqw2c-gesax-jbn3j-n5f5u-tclno-zae");
   private stable var minting_account : Account = {
     owner = owner_;
     subaccount = null;
